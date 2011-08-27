@@ -1,0 +1,925 @@
+;; Object gadgets/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "gadgets/"
+  :tables (list 
+   (semanticdb-table "Broadcaster.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("gadgets/Broadcaster.h" include (:system-flag t) nil [331 363])
+            ("gadgets/threads.h" include (:system-flag t) nil [364 392])
+            ("gadgets/stringutils.h" include (:system-flag t) nil [393 425])
+            ("winsock2.h" include (:system-flag t) nil [426 447])
+            ("Ws2tcpip.h" include (:system-flag t) nil [448 469])
+            ("process.h" include (:system-flag t) nil [470 490])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [492 512])
+            ("uri_host" function
+               (:parent "ClientInfo"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [514 703])
+            ("uri_ip" function
+               (:parent "ClientInfo"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [704 889])
+            ("scheme" function
+               (:parent "ClientInfo"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [891 1334])
+            ("MyIPFinderRecvThread" function
+               (:arguments 
+                  ( ("input" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1606 1618]))                  
+                :type ("__stdcall" type (:type "class") nil nil))
+                nil [1575 2720])
+            ("GetPossibleIPs" function
+               (:parent "MyIPFinder"
+                :arguments 
+                  ( ("ips" variable
+                       (:pointer 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("string_pair" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2979 3004]))                  
+                :type "void")
+                nil [2947 3454])
+            ("GetMyIP" function
+               (:parent "MyIPFinder"
+                :arguments 
+                  ( ("Ip" variable
+                       (:pointer 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4015 4031])
+                    ("Name" variable
+                       (:pointer 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4032 4050]))                  
+                :type "void")
+                nil [3990 5471])
+            ("Write7BitEncodedInt" function
+               (:arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [5750 5772])
+                    ("val" variable (:type "int") (reparse-symbol arg-sub-list) [5773 5781]))                  
+                :type "int")
+                nil [5726 6083])
+            ("Read7BitEncodedInt" function
+               (:arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [6363 6385])
+                    ("val" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6386 6396]))                  
+                :type "int")
+                nil [6340 6844])
+            ("BroadCasterRecvThread" function
+               (:arguments 
+                  ( ("input" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7168 7180]))                  
+                :type ("__stdcall" type (:type "class") nil nil))
+                nil [7136 8605])
+            ("BroadCasterSendThread" function
+               (:arguments 
+                  ( ("input" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8914 8926]))                  
+                :type ("__stdcall" type (:type "class") nil nil))
+                nil [8882 10277])
+            ("BroadCaster" function
+               (:constructor-flag t
+                :parent "BroadCaster"
+                :arguments 
+                  ( ("broadcastEnabled" variable (:type "bool") (reparse-symbol arg-sub-list) [10466 10488]))                  
+                :type ("BroadCaster" type (:type "class") nil nil))
+                nil [10441 12829])
+            ("BroadCaster" function
+               (:destructor-flag t
+                :parent "BroadCaster"
+                :type "void")
+                nil [12993 13787])
+            ("AddLocalClientInfo" function
+               (:parent "BroadCaster"
+                :arguments 
+                  ( ("info" variable (:type ("ClientInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14034 14050]))                  
+                :type "void")
+                nil [13997 15255])
+            ("RemoveLocalClientInfo" function
+               (:parent "BroadCaster"
+                :arguments 
+                  ( ("info" variable (:type ("ClientInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15462 15478]))                  
+                :type "void")
+                nil [15422 16048])
+            ("RemoveLocalClientInfo" function
+               (:parent "BroadCaster"
+                :arguments 
+                  ( ("connectionId" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16286 16307]))                  
+                :type "void")
+                nil [16245 16838])
+            ("AddNetClientInfo" function
+               (:parent "BroadCaster"
+                :arguments 
+                  ( ("info" variable (:type ("ClientInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17076 17092]))                  
+                :type "void")
+                nil [17041 18431])
+            ("Terminated" function
+               (:parent "BroadCaster"
+                :type "bool")
+                nil [18647 18708])
+            ("SetTerminated" function
+               (:parent "BroadCaster"
+                :arguments 
+                  ( ("val" variable (:type "bool") (reparse-symbol arg-sub-list) [18955 18964]))                  
+                :type "void")
+                nil [18923 18994])
+            ("Sendto" function
+               (:parent "BroadCaster"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [19183 19205])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [19206 19215]))                  
+                :type "int")
+                nil [19159 19750])
+            ("Recvfrom" function
+               (:parent "BroadCaster"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [19940 19962])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [19963 19972]))                  
+                :type "int")
+                nil [19914 20112])
+            ("GetLocalClientInfo" function
+               (:parent "BroadCaster"
+                :arguments 
+                  ( ("infos" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("ClientInfo" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20314 20345]))                  
+                :type "void")
+                nil [20277 20695])
+            ("GetNetClientInfo" function
+               (:parent "BroadCaster"
+                :arguments 
+                  ( ("infos" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("ClientInfo" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20894 20925]))                  
+                :type "void")
+                nil [20859 21269])
+            ("GetSendRate" function
+               (:parent "BroadCaster"
+                :type "unsigned int")
+                nil [21433 21549])
+            ("SetSendRate" function
+               (:parent "BroadCaster"
+                :arguments 
+                  ( ("val" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [21743 21760]))                  
+                :type "void")
+                nil [21713 21836])
+            ("GetBroadcastEnabled" function
+               (:parent "BroadCaster"
+                :type "bool")
+                nil [22000 22132])
+            ("SetBroadcastEnabled" function
+               (:parent "BroadCaster"
+                :arguments 
+                  ( ("val" variable (:type "bool") (reparse-symbol arg-sub-list) [22334 22343]))                  
+                :type "void")
+                nil [22296 22435])
+            ("GetIPAddressFromServerName" function
+               (:arguments 
+                  ( ("serverName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22694 22717]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [22655 23081]))          
+    :file "Broadcaster.cpp"
+    :pointmax 23082
+    :fsize 23810
+    :lastmodtime '(19913 49861)
+    :unmatched-syntax '((UNSIGNED 8873 . 8881) (UNSIGNED 7127 . 7135) (UNSIGNED 1566 . 1574))
+    )
+   (semanticdb-table "Broadcaster.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("BroadcasterH" variable (:constant-flag t) nil [109 121])
+            ("string" include (:system-flag t) nil [200 217])
+            ("vector" include (:system-flag t) nil [218 235])
+            ("map" include (:system-flag t) nil [236 250])
+            ("utility" include (:system-flag t) nil [251 269])
+            ("winsock2.h" include (:system-flag t) nil [270 291])
+            ("time.h" include (:system-flag t) nil [292 309])
+            ("gadgets/GadgetsEnums.h" include (:system-flag t) nil [310 343])
+            ("string_pair" type
+               (:typedef ("std::pair" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::pair"
+                :type "typedef")
+                nil [345 401])
+            ("ClientInfo" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [424 431])
+                    ("ClientInfo" function
+                       (:constructor-flag t
+                        :type ("ClientInfo" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [433 528])
+                    ("ClientInfo" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("Ip" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [541 556])
+                            ("Name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [557 574])
+                            ("Port" variable (:type "int") (reparse-symbol arg-sub-list) [575 584])
+                            ("Type" variable (:type ("ServerTypeEnum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [585 605])
+                            ("ConnectionId" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [606 632])
+                            ("" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [633 646]))                          
+                        :type ("ClientInfo" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [530 751])
+                    ("ip" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [756 771])
+                    ("name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [776 793])
+                    ("connectionId" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [798 823])
+                    ("data" variable (:type "unsigned int") (reparse-symbol classsubparts) [828 846])
+                    ("port" function (:type "unsigned short") (reparse-symbol classsubparts) [848 921])
+                    ("type" function (:type ("ServerTypeEnum" type (:type "class") nil nil)) (reparse-symbol classsubparts) [923 1002])
+                    ("version" function (:type "unsigned char") (reparse-symbol classsubparts) [1007 1085])
+                    ("port" function
+                       (:arguments 
+                          ( ("val" variable (:type "unsigned short") (reparse-symbol arg-sub-list) [1104 1123]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1091 1161])
+                    ("type" function
+                       (:arguments 
+                          ( ("val" variable (:type ("ServerTypeEnum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1176 1196]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1163 1256])
+                    ("version" function
+                       (:arguments 
+                          ( ("val" variable (:type "unsigned char") (reparse-symbol arg-sub-list) [1274 1293]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1261 1353])
+                    ("updated" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1359 1374])
+                    ("uri_host" function
+                       (:prototype-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1380 1403])
+                    ("uri_ip" function
+                       (:prototype-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1408 1431])
+                    ("uri" function (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1436 1476])
+                    ("private" label nil (reparse-symbol classsubparts) [1479 1487])
+                    ("scheme" function
+                       (:prototype-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1492 1513]))                  
+                :type "class")
+                nil [403 1516])
+            ("MyIPFinder" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1539 1546])
+                    ("MyIPFinder" function
+                       (:constructor-flag t
+                        :type ("MyIPFinder" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1551 1566])
+                    ("GetMyIP" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("Ip" variable
+                               (:pointer 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1601 1617])
+                            ("Name" variable
+                               (:pointer 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1618 1636]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1588 1637])
+                    ("private" label nil (reparse-symbol classsubparts) [1640 1648])
+                    ("GetPossibleIPs" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ips" variable
+                               (:pointer 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("string_pair" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1719 1749]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1699 1750]))                  
+                :type "class")
+                nil [1518 1753])
+            ("Write7BitEncodedInt" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [1779 1801])
+                    ("val" variable (:type "int") (reparse-symbol arg-sub-list) [1802 1811]))                  
+                :type "int")
+                nil [1755 1812])
+            ("Read7BitEncodedInt" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [1836 1858])
+                    ("val" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1859 1869]))                  
+                :type "int")
+                nil [1813 1870])
+            ("BroadCaster" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1894 1901])
+                    ("BroadCaster" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("broadcastEnabled" variable (:type "bool") (reparse-symbol arg-sub-list) [1918 1940])
+                            ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1940 1945]))                          
+                        :type ("BroadCaster" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1906 1946])
+                    ("BroadCaster" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1951 1966])
+                    ("AddLocalClientInfo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("info" variable (:type ("ClientInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1996 2012]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1972 2013])
+                    ("RemoveLocalClientInfo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("info" variable (:type ("ClientInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2042 2058]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2015 2059])
+                    ("RemoveLocalClientInfo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("connectionId" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2088 2113]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2061 2114])
+                    ("AddNetClientInfo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("info" variable (:type ("ClientInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2141 2157]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2119 2158])
+                    ("GetLocalClientInfo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("infos" variable
+                               (:pointer 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("ClientInfo" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2188 2219]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2164 2220])
+                    ("GetNetClientInfo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("infos" variable
+                               (:pointer 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("ClientInfo" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2247 2278]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2225 2279])
+                    ("Sendto" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("buffer" variable
+                               (:pointer 1
+                                :type "unsigned char")
+                                (reparse-symbol arg-sub-list) [2299 2321])
+                            ("size" variable (:type "int") (reparse-symbol arg-sub-list) [2322 2331]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2285 2332])
+                    ("Recvfrom" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("buffer" variable
+                               (:pointer 1
+                                :type "unsigned char")
+                                (reparse-symbol arg-sub-list) [2351 2373])
+                            ("size" variable (:type "int") (reparse-symbol arg-sub-list) [2374 2383]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2337 2384])
+                    ("Terminated" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2390 2417])
+                    ("GetSendRate" function
+                       (:prototype-flag t
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [2422 2450])
+                    ("SetSendRate" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("val" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2481 2498]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2455 2499])
+                    ("GetBroadcastEnabled" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2504 2540])
+                    ("SetBroadcastEnabled" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("val" variable (:type "bool") (reparse-symbol arg-sub-list) [2579 2588]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2545 2589])
+                    ("private" label nil (reparse-symbol classsubparts) [2593 2601])
+                    ("TerminatedSpinlock" variable (:type "long") (reparse-symbol classsubparts) [2606 2630])
+                    ("LocalClientsSpinlock" variable (:type "long") (reparse-symbol classsubparts) [2665 2691])
+                    ("NetClientsSpinlock" variable (:type "long") (reparse-symbol classsubparts) [2726 2750])
+                    ("SendRateSpinlock" variable (:type "long") (reparse-symbol classsubparts) [2785 2807])
+                    ("BroadCastEnabledSpinlock" variable (:type "long") (reparse-symbol classsubparts) [2842 2872])
+                    ("MultiCastAddr" variable (:type ("sockaddr_in" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2908 2936])
+                    ("ThreadsTerminate" variable (:type "bool") (reparse-symbol classsubparts) [2941 2972])
+                    ("MultiCastPort" variable (:type "int") (reparse-symbol classsubparts) [2977 3005])
+                    ("SendRate" variable (:type "unsigned int") (reparse-symbol classsubparts) [3010 3033])
+                    ("BroadCastEnabled" variable (:type "bool") (reparse-symbol classsubparts) [3038 3069])
+                    ("MultiCastIP" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3074 3100])
+                    ("MultiCastInterfaceIP" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3105 3140])
+                    ("MCastSockRecv" variable (:type ("SOCKET" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3146 3167])
+                    ("threadH" variable
+                       (:dereference 1
+                        :type ("HANDLE" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3173 3191])
+                    ("LocalClients" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil)
+                              ("std::vector" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3196 3257])
+                    ("NetClients" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil)
+                              ("std::vector" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3262 3321])
+                    ("SetTerminated" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("val" variable (:type "bool") (reparse-symbol arg-sub-list) [3346 3355]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3327 3356]))                  
+                :type "class")
+                nil [1872 3360])
+            ("GetIPAddressFromServerName" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("serverName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3401 3424]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [3362 3425]))          
+    :file "Broadcaster.h"
+    :pointmax 3434
+    :fsize 3539
+    :lastmodtime '(19909 32206)
+    :unmatched-syntax '((punctuation 1939 . 1940) (semantic-list 644 . 646) (punctuation 631 . 632))
+    :lexical-table 
+        '(("BroadcasterH")
+          )
+
+    )
+   (semanticdb-table "GadgetsEnums.h"
+    :file "GadgetsEnums.h"
+    :fsize 834
+    :lastmodtime '(19909 32100)
+    )
+   (semanticdb-table "stringutils.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("gadgets/stringutils.h" include (:system-flag t) nil [262 294])
+            ("gadgets/streams.h" include (:system-flag t) nil [295 323])
+            ("gadgets/gadgets.h" include (:system-flag t) nil [324 352])
+            ("iostream" include (:system-flag t) nil [353 372])
+            ("boost/algorithm/string.hpp" include (:system-flag t) nil [373 410])
+            ("boost/static_assert.hpp" include (:system-flag t) nil [411 445])
+            ("pwrtool/wm_messages.h" include nil nil [492 524])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [561 581])
+            ("stringUtils" type
+               (:members 
+                  ( ("incrementSuffix" function
+                       (:arguments 
+                          ( ("baseString" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [949 972])
+                            ("suffixDelimiter" variable (:type "char") (reparse-symbol arg-sub-list) [973 994]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [921 1463])
+                    ("ToWstr" function
+                       (:arguments 
+                          ( ("str" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1612 1623]))                          
+                        :type ("std::wstring" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1592 1953])
+                    ("isstrnil" function
+                       (:arguments 
+                          ( ("str" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2129 2146]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [2114 2258])
+                    ("stccpy" function
+                       (:arguments 
+                          ( ("dst" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2487 2497])
+                            ("src" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2498 2514])
+                            ("maxlen" variable (:type "int") (reparse-symbol arg-sub-list) [2515 2527]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2475 2629])
+                    ("stccpy_trim" function
+                       (:arguments 
+                          ( ("dst" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2882 2892])
+                            ("src" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2893 2909])
+                            ("maxlen" variable (:type "int") (reparse-symbol arg-sub-list) [2910 2922]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2865 3284])
+                    ("strcntr" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("src" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [3612 3622])
+                            ("dst" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [3623 3633])
+                            ("len" variable (:type "int") (reparse-symbol arg-sub-list) [3634 3643]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [3597 3909])
+                    ("strfcpy" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("dst" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4173 4183])
+                            ("src" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4184 4200])
+                            ("maxlen" variable (:type "int") (reparse-symbol arg-sub-list) [4201 4213]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [4158 4383])
+                    ("strtrim" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("str" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4553 4564]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [4538 4793])
+                    ("isNumber" function
+                       (:arguments 
+                          ( ("str" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4987 5004]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [4972 5210])
+                    ("itos" function
+                       (:arguments 
+                          ( ("num" variable (:type "int") (reparse-symbol arg-sub-list) [5339 5347]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [5327 5408])
+                    ("removeWhitespace" function
+                       (:arguments 
+                          ( ("input" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5702 5715]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [5678 6281])
+                    ("tokenizeString" function
+                       (:arguments 
+                          ( ("input" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6549 6567])
+                            ("delimiter" variable (:type "char") (reparse-symbol arg-sub-list) [6568 6583])
+                            ("tokens" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6584 6617]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [6529 6949])
+                    ("unterminatedCharBufToString" function
+                       (:arguments 
+                          ( ("unterminatedCharBuf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [7319 7351])
+                            ("length" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [7352 7369]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [7279 7497])
+                    ("MX" variable (:constant-flag t) (reparse-symbol namespacesubparts) [7508 7510])
+                    ("btea" function
+                       (:arguments 
+                          ( ("v" variable
+                               (:pointer 1
+                                :type "long")
+                                (reparse-symbol arg-sub-list) [7665 7673])
+                            ("n" variable (:type "int") (reparse-symbol arg-sub-list) [7674 7680])
+                            ("k" variable
+                               (:dereference 1
+                                :constant-flag t
+                                :type "long")
+                                (reparse-symbol arg-sub-list) [7681 7697]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7655 8261])
+                    ("base64encode" function
+                       (:arguments 
+                          ( ("src" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [8474 8490])
+                            ("len" variable (:type "int") (reparse-symbol arg-sub-list) [8491 8499]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [8454 9339])
+                    ("base64decode" function
+                       (:arguments 
+                          ( ("src" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9640 9651])
+                            ("dest" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [9652 9663]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [9623 13743])
+                    ("base64encode" function
+                       (:arguments 
+                          ( ("s" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13964 13973]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [13944 14020])
+                    ("base64decode" function
+                       (:arguments 
+                          ( ("s" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14254 14263]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [14234 14425])
+                    ("find_nth_of" function
+                       (:arguments 
+                          ( ("s" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14693 14702])
+                            ("n" variable (:type "int") (reparse-symbol arg-sub-list) [14703 14709])
+                            ("c" variable (:type "char") (reparse-symbol arg-sub-list) [14710 14718]))                          
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [14673 14844])
+                    ("trimString" function
+                       (:arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14862 14879]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [14846 15799])
+                    ("lastDelimiter" function
+                       (:arguments 
+                          ( ("delimiters" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15828 15851])
+                            ("s" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15852 15866]))                          
+                        :type "unsigned int")
+                        (reparse-symbol namespacesubparts) [15801 15909])
+                    ("ToUpper" function
+                       (:arguments 
+                          ( ("value" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15931 15949]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [15911 15999])
+                    ("ToLower" function
+                       (:arguments 
+                          ( ("value" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16021 16039]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [16001 16089])
+                    ("caseInsensitiveEquals" function
+                       (:arguments 
+                          ( ("lhs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16120 16143])
+                            ("rhs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16144 16168]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [16092 16391])
+                    ("asciiArmorLineLength" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [16393 16436])
+                    ("asciiArmorEncode" function
+                       (:arguments 
+                          ( ("s" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16462 16472]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [16437 16738])
+                    ("asciiArmorDecode" function
+                       (:arguments 
+                          ( ("s" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16764 16774]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [16739 16803])
+                    ("bteaEncryptAndArmor" function
+                       (:arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16831 16847])
+                            ("dest" variable
+                               (:reference 1
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16848 16861])
+                            ("k" variable
+                               (:dereference 1
+                                :constant-flag t
+                                :type "long")
+                                (reparse-symbol arg-sub-list) [16862 16879]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [16805 17007])
+                    ("bteaDecryptAndArmor" function
+                       (:arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17034 17050])
+                            ("dest" variable
+                               (:reference 1
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17051 17064])
+                            ("k" variable
+                               (:dereference 1
+                                :constant-flag t
+                                :type "long")
+                                (reparse-symbol arg-sub-list) [17065 17082]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [17008 17160])
+                    ("bteaEncrypt" function
+                       (:arguments 
+                          ( ("source" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17180 17206])
+                            ("dest" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17207 17225])
+                            ("k" variable
+                               (:dereference 1
+                                :constant-flag t
+                                :type "long")
+                                (reparse-symbol arg-sub-list) [17226 17243]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [17162 17674])
+                    ("bteaDecrypt" function
+                       (:arguments 
+                          ( ("source" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17693 17719])
+                            ("dest" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17720 17738])
+                            ("k" variable
+                               (:dereference 1
+                                :constant-flag t
+                                :type "long")
+                                (reparse-symbol arg-sub-list) [17739 17756]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [17675 18344])
+                    ("bin2c" function
+                       (:arguments 
+                          ( ("source" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18360 18381])
+                            ("struct_name" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [18382 18407]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [18346 19379])
+                    ("sprintf" function
+                       (:arguments 
+                          ( ("fmt" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [19396 19412])
+                            ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [19413 19417]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [19381 19661])
+                    ("GetLastErrorString" function (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol namespacesubparts) [19664 20120])
+                    ("to_string" function
+                       (:type ("std::string" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("g" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("GUID" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [20161 20175]))                          
+                        :template-specifier 
+                          ( ("GUID" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [20122 20215])
+                    ("to_string" function
+                       (:type ("std::string" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("t" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("time_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [20258 20274]))                          
+                        :template-specifier 
+                          ( ("time_t" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [20217 20314])
+                    ("windows_message_to_string" function
+                       (:pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("msg" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [20354 20371]))                          
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [20316 32928]))                  
+                :type "namespace")
+                nil [583 32931]))          
+    :file "stringutils.cpp"
+    :pointmax 32957
+    :fsize 34160
+    :lastmodtime '(19909 32206)
+    :unmatched-syntax '((punctuation 4793 . 4794) (punctuation 4383 . 4384) (punctuation 3909 . 3910) (punctuation 3284 . 3285) (punctuation 2629 . 2630) (punctuation 2258 . 2259) (semantic-list 478 . 490) (symbol 471 . 478) (symbol 464 . 470) (punctuation 463 . 464) (symbol 455 . 462) (symbol 448 . 454) (punctuation 447 . 448))
+    :lexical-table 
+        '(("MX" . 
+              ((semantic-list "(z>>5^y<<2)" 7511 . 7522) (punctuation "+" 7523 . 7524) (semantic-list "(y>>3^z<<4)" 7525 . 7536) (punctuation "^" 7536 . 7537) (semantic-list "(sum^y)" 7537 . 7544) (punctuation "+" 7545 . 7546) (semantic-list "(k[p&3^e]^z)" 7547 . 7559) (punctuation ";" 7559 . 7560)))
+          )
+
+    )
+   )
+  :file "!Users!ian!Code!Windmil!Engine!gadgets!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

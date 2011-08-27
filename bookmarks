@@ -1,0 +1,10 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("parse.y"
+ (filename . "~/Code/ruby/parse.y")
+ (front-context-string . "\n/*%%%*/\n%token\n")
+ (rear-context-string . "vtable *vars;\n}\n")
+ (position . 22450))
+)

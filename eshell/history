@@ -1,0 +1,24 @@
+sml
+sudo emacs /etc/hosts
+sudo emacs /etc/hosts
+ls
+brew update
+brew update coffee-script
+brew upgrade coffee-script
+ls
+brew update
+cd ..
+ls
+git svn clone http://v8.googlecode.com/svn/trunk/
+ls
+cd v8
+mv trunk
+mv trunk v8
+ls
+cd v8
+git svn pull
+git svn rebase
+ghc-pkg list
+cabal install
+cabal install
+cabal install

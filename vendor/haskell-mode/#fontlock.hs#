@@ -47,3 +47,4 @@ bdigits 1             = [1]
 bdigits n | n > 1       = n `mod` 2 :
 
 -- arch-tag: a0d08cc2-4a81-4139-93bc-b3c6be0b5fb2
+

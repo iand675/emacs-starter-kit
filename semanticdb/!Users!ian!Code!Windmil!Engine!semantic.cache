@@ -1,0 +1,29 @@
+;; Object Engine/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Engine/"
+  :tables (list 
+   (semanticdb-table "MainTester.cpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("tchar.h" include (:system-flag t) nil [97 115])
+            ("_tmain" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [223 232])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type ("_TCHAR" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [233 248]))                  
+                :type "int")
+                nil [212 266]))          
+    :file "MainTester.cpp"
+    :pointmax 345
+    :fsize 357
+    :lastmodtime '(19909 32097)
+    :unmatched-syntax '((symbol 203 . 211) (symbol 196 . 202) (punctuation 195 . 196) (symbol 88 . 95) (symbol 81 . 87) (punctuation 80 . 81))
+    )
+   )
+  :file "!Users!ian!Code!Windmil!Engine!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )
